@@ -1,0 +1,23 @@
+{
+  "name": "isaidcode.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "typed.js": "^2.0.9"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/isaidcode/isaidcode.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/isaidcode/isaidcode.github.io/issues"
+  },
+  "homepage": "https://github.com/isaidcode/isaidcode.github.io#readme"
+}
