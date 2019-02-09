@@ -1,0 +1,48 @@
+section{
+    text-align: center;
+    font-family: 'Major Mono Display', monospace;
+    background-color: #e3e1e3;
+    font-size: 20px;
+    opacity: 0.6;
+}
+
+h1{
+font-family: 'Quicksand', sans-serif;
+font-size: 18px;
+margin-top: 200px;
+
+}
+.name{
+    font-family: 'Quicksand', sans-serif;
+    font-size: 35px;
+}
+  
+div {
+    height: 200px;
+    width: 400px;
+
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -100px;
+    margin-left: -200px;
+}
+
+  .launch {
+    font-weight: bold;
+    background-color: #FF4136;
+    color: white;
+    margin: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: none;
+    padding-left: 30px;
+    padding-right: 30px;
+    border-radius: 40px; 
+    opacity: 1
+  }
+
+#typed { 
+    color: red !important;
+    font-weight: 900;
+}
