@@ -2,8 +2,12 @@ from app import db
 
 class User(db.Model):
     id    = db.Column(db.Integer, primary_key=True)
-    usernaem = db.Column(db.String(30), nullable=False)
+    username = db.Column(db.String(30), nullable=False)
     car = db.relationship("Car", uselist=False, back_populates="user")
+    
+    def jsonify(self):
+        return {"username":self.username, "id": self.id, "car_id": self.car.id}
+
     def __repr__(self):
         return f"User('{self.id}, {self.car}')"
 
