@@ -1,6 +1,10 @@
 from app import app, api, Resource
 from app.models import User, Car
-from flask import jsonify
+from flask import jsonify, render_template
+
+@app.route('/')
+def index():
+    return render_template('index.html')
 
 class Users(Resource):
     def get(self):
