@@ -13,4 +13,3 @@ class SMS:
                              from_='+13437006148',
                              to='+16136179842'
                          )
-        print(message)

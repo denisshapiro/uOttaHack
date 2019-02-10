@@ -25,10 +25,10 @@ def shortest_distance(lat_address, lon_address, list_of_locations):
 	listOfDistances = []
 	shortest_distance = []
 	min_index = 0
-	for x in range (len(list_of_locations)-1):
-		listOfDistances.append(calculate_distance(lat_address, lon_address, list_of_locations[x][1],list_of_locations[x][2]))
+	for x in range (len(list_of_locations)):
+		listOfDistances.append(calculate_distance(lat_address, lon_address, list_of_locations[x][0],list_of_locations[x][1]))
 		
-	index_min = min(xrange(len(values)), key=values.__getitem__)
+	index_min = min(range(len(listOfDistances)), key=listOfDistances.__getitem__)
 	return list_of_locations[index_min]
 
-
+# (45.4295526667286, -75.7437935927252)

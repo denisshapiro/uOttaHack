@@ -16,9 +16,14 @@ class Car(db.Model):
     model = db.Column(db.String(200), nullable=False)
     year = db.Column(db.Integer, nullable=False)
     colour = db.Column(db.String(20), nullable=False)
+    lat = db.Column(db.Float)
+    lon = db.Column(db.Float)
 
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
     user = db.relationship("User", back_populates='car')
+
+    def jsonify(self):
+        return {"model": self.model, "year": self.year, "colour": self.colour, "lat": self.lat, "lon": self.lon}
 
     def __repr__(self):
         return f"Car('{self.year} {self.colour} {self.model} | {self.user_id}')"

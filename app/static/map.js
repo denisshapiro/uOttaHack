@@ -8,7 +8,8 @@ function initMap() {
         },
         zoom: 16
     });
-    console.log('yeet')
+
+    let geocoder = new google.maps.Geocoder;
 
     var pos;
     if (navigator.geolocation) {
@@ -46,4 +47,27 @@ function initMap() {
     marker.addListener('click', function() {
         infowindow.open(map, marker);
     });
+
+    $.get("https://4e2d7ec9.ngrok.io/cars", function(data, status) {
+        for (var i = 0; i < data.length; i++) {
+            let d = data[i];
+            let lat = d["lat"]
+            let lon = d["lon"]
+            let markerLocation = {
+                lat: lat,
+                lng: lon
+            };
+            let marker = new google.maps.Marker({
+                position: markerLocation,
+                map: map,
+                icon: 'https://i.imgur.com/XCXF71h.png'
+            })
+            let infoWindow = new google.maps.InfoWindow({
+                content: d["year"] + " " + d["model"] + " " + d["colour"]
+            })
+            marker.addListener("click", function() {
+                infoWindow.open(map, marker);
+            });
+        }
+    })
 }
