@@ -38,5 +38,12 @@ function initMap() {
         map: map,
         icon: 'https://i.imgur.com/XCXF71h.png'
     })
-    console.log(marker)
+
+    var infowindow = new google.maps.InfoWindow({
+        content: 'Book now lil nigga'
+    });
+
+    marker.addListener('click', function() {
+        infowindow.open(map, marker);
+    });
 }
