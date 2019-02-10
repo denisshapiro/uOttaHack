@@ -5,6 +5,7 @@ from twilio.twiml.messaging_response import MessagingResponse
 import requests
 from .config import LOCATIONIQ_API_KEY
 import json
+import sqlalchemy
 
 def getLatLng(address):
     url = "https://us1.locationiq.com/v1/search.php"
