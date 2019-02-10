@@ -23,8 +23,7 @@ def calculate_distance(lat1, lon1, lat2, lon2):
 
 def shortest_distance(lat_address, lon_address, list_of_locations):
 	listOfDistances = []
-	shortest_distance = []
-	min_index = 0
+
 	for x in range (len(list_of_locations)-1):
 		listOfDistances.append(calculate_distance(lat_address, lon_address, list_of_locations[x][1],list_of_locations[x][2]))
 		
