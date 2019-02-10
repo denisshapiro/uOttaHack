@@ -1,6 +1,6 @@
 from app import app, api, Resource
 from app.models import User, Car
-from flask import jsonify, render_template
+from flask import jsonify, render_template, url_for
 
 @app.route('/')
 def index():
@@ -12,8 +12,6 @@ def map():
 
 class Users(Resource):
     def get(self):
-        x = [user.jsonify() for user in User.query.all()]
-        print(x)
-        return x
+        return jsonify([user.jsonify() for user in User.query.all()])
 
 api.add_resource(Users, '/users')
