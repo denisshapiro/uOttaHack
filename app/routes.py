@@ -6,6 +6,10 @@ from flask import jsonify, render_template
 def index():
     return render_template('index.html')
 
+@app.route('/map')
+def map():
+    return render_template('map.html')
+
 class Users(Resource):
     def get(self):
         x = [user.jsonify() for user in User.query.all()]

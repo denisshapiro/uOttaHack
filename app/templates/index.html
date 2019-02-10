@@ -13,13 +13,12 @@
         <div id="typed-strings">
             <p style="margin: 5px 0" class="name"><strong>RENTO</strong></p>
             <p style="margin: 5px 0">rent a <span id="typed"></span></p>
-            <a href="map.html">
-                <button class="launch">Enter &#9166</button> 
+            <a href="{{url_for('map')}}">
+                <button class="launch">Enter &amp;9166</button> 
             </a>
         </div>
     </section>
 </body>
-<!-- <script src="../js/index_effects.js"></script> -->
 <script src="{{url_for('static', filename='index_effects.js')}}"></script>
 
 </html>
