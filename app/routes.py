@@ -1,4 +1,4 @@
-from app import app, api, Resource
+from app import app, api, Resource, db
 from app.models import User, Car
 from flask import jsonify, render_template, request
 from twilio.twiml.messaging_response import MessagingResponse
@@ -25,6 +25,25 @@ def getLatLng(address):
 def getAddress(resp):
     address = json.loads(resp)['address']
     return address['house_number'] + ' ' + address['road'] + ' ' + address['city'] + ' ' + address['state'] + ' ' + address['country']
+
+def changeDBp1(id):
+
+    c = Car.query.get(id)
+    c.status = "taken"
+    c.user_id = "0016136179842"
+    db.session.add(c)
+    db.session.commit()
+    return "car checked out"
+
+def changeDBp2(id):
+
+    c = Car.query.get(id)
+    c.status = "free"
+    c.user_id = None
+    u = User.query.get("0016136179842")
+    db.session.add(c)
+    db.session.commit()
+    return "car returned"  
 
 @app.route('/')
 def index():
