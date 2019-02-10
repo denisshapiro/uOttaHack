@@ -1,5 +1,5 @@
 let typed = new Typed('#typed', {
-    strings: ['car', 'motorbike', 'bicycle'],
+    strings: ['car', 'bike', 'plane'],
     typeSpeed: 100,
     backSpeed: 80,
     fadeOut: true,
