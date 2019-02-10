@@ -22,6 +22,25 @@ def getLatLng(address):
     lon = response['lon']
     return f'{lat}, {lon}'
 
+def changeDBp1(id):
+
+    c = Car.query.get(id)
+    c.status = "taken"
+    c.user_id = "0016136179842"
+    db.session.add()
+    db.session.commit()
+    return "car checked out"
+
+def changeDBp2(id):
+
+    c = Car.query.get(id)
+    c.status = "free"
+    c.user_id = None
+    u = User.query.get("0016136179842")
+    db.session.add()
+    db.session.commit()
+    return "car returned"  
+
 @app.route('/')
 def index():
     return render_template('index.html')
