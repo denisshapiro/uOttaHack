@@ -1,7 +1,6 @@
 # Custom
 *.db
 .vscode/
-config.py
 .DS_STORE
 
 # Byte-compiled / optimized / DLL files
