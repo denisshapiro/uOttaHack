@@ -3,7 +3,7 @@ let typed = new Typed('#typed', {
     typeSpeed: 100,
     backSpeed: 80,
     fadeOut: true,
-    loop: true
+    loop: true 
   });
 
 
