@@ -6,7 +6,7 @@ function initMap() {
             lat: -34.397,
             lng: 150.644
         },
-        zoom: 16
+        zoom: 16 
     });
 
     let geocoder = new google.maps.Geocoder;
