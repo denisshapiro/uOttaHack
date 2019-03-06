@@ -9,7 +9,7 @@ def calculate_distance(lat1, lon1, lat2, lon2):
 	phi2 = math.radians(lat2)
 	lambda1 = math.radians(lon1)
 	lambda2 = math.radians(lon2)
-
+ 
 	delta_phi = phi2 - phi1
 	delta_lambda = lambda2 - lambda1
 
