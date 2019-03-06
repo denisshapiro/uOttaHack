@@ -6,7 +6,7 @@ let typed = new Typed('#typed', {
     loop: true 
   });
 
-
+ 
 //let search = "placeholder";  
 //document.body.innerHTML = document.body.innerHTML.split(search).join(new Date().toLocaleString())
 
